@@ -81,9 +81,14 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+require 'vcr'
+require 'webmock/rspec'
+
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
+
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
-  config.filter_sensitive_data('<FDA_API_KEY>') { ENV['fda_api_key'] }
+  config.filter_sensitive_data('<FDA_API_KEY>') { Rails.application.credentials.open_fda[:fda_api_key }
   config.configure_rspec_metadata!
 end
