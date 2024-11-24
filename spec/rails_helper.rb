@@ -70,12 +70,13 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include FactoryBot::Syntax::Methods
   config.before(:suite) do
     WebMock.disable_net_connect!(allow_localhost: true)
   end
 end
 
-require("./spec/support/factory_bot")
+
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
@@ -92,6 +93,6 @@ Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
-  config.filter_sensitive_data('<FDA_API_KEY>') { Rails.application.credentials.open_fda[:fda_api_key }
+  config.filter_sensitive_data('<FDA_API_KEY>') { Rails.application.credentials.open_fda[:fda_api_key] }
   config.configure_rspec_metadata!
 end
