@@ -13,7 +13,7 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-11-23T19:59:05-05:00">2024-11-23T19:59:05-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-11-23T20:39:41-05:00">2024-11-23T20:39:41-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,14 +22,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.65%
+  98.94%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         104.28
+         80.54
        </span>
     </span> hits/line
     )
@@ -38,15 +38,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>10</b> files in total.
+    <b>12</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>74</b> relevant lines,
-    <span class="green"><b>73</b> lines covered</span> and
+    <b>94</b> relevant lines,
+    <span class="green"><b>93</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  98.65%
+  98.94%
 </span>
 )
   </div>
@@ -70,13 +70,35 @@
       <tbody>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#62ef340a2d819ffa5db0fafe70402fc3d065ace0" class="src_link" title="app/poros/nocolor_drug_result.rb">app/poros/nocolor_drug_result.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">62</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">6.44</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#d4063e1d0b422e4d54543ddd396c2021b327732c" class="src_link" title="app/serializers/nocolor_drug_result_serializer.rb">app/serializers/nocolor_drug_result_serializer.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#1108c18132272804367727494119326a3dc2beef" class="src_link" title="app/services/drug_service.rb">app/services/drug_service.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">96.67 %</td>
-            <td class="cell--number">86</td>
-            <td class="cell--number">30</td>
-            <td class="cell--number">29</td>
+            <td class="green strong cell--number t-file__coverage">96.43 %</td>
+            <td class="cell--number">57</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">255.77</td>
+            <td class="cell--number">264.54</td>
             
           </tr>
         
@@ -196,12 +218,12 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="1108c18132272804367727494119326a3dc2beef">
+        <div class="source_table" id="62ef340a2d819ffa5db0fafe70402fc3d065ace0">
   <div class="header">
-    <h3>app/services/drug_service.rb</h3>
+    <h3>app/poros/nocolor_drug_result.rb</h3>
     <h4>
       <span class="green">
-  96.67%
+  100.0%
 </span>
 
       lines covered
@@ -210,8 +232,794 @@
     
 
     <div class="t-line-summary">
-      <b>30</b> relevant lines.
-      <span class="green"><b>29</b> lines covered</span> and
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class NocolorDrugResult</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  attr_reader :drug</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def initialize(drug)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="8" data-linenumber="5">
+            
+              <span class="hits">8</span>
+            
+
+            
+
+            <code class="ruby">    @drug = drug</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="8" data-linenumber="9">
+            
+              <span class="hits">8</span>
+            
+
+            
+
+            <code class="ruby">    drug[:id]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def fields</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="8" data-linenumber="13">
+            
+              <span class="hits">8</span>
+            
+
+            
+
+            <code class="ruby">    collect_fields</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def package_label_principal_display_panel</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="8" data-linenumber="17">
+            
+              <span class="hits">8</span>
+            
+
+            
+
+            <code class="ruby">    drug[:package_label_principal_display_panel]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def metadata</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+
+            
+
+            <code class="ruby">    {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="8" data-linenumber="22">
+            
+              <span class="hits">8</span>
+            
+
+            
+
+            <code class="ruby">      set_id: drug[:set_id],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+
+            
+
+            <code class="ruby">      id: drug[:id],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+
+            
+
+            <code class="ruby">      effective_time: drug[:effective_time],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+
+            
+
+            <code class="ruby">      version: drug[:version],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+
+            
+
+            <code class="ruby">      openfda: drug[:openfda]&amp;.slice(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+
+            
+
+            <code class="ruby">        :application_number,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+
+            
+
+            <code class="ruby">        :brand_name,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+
+            
+
+            <code class="ruby">        :generic_name,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+
+            
+
+            <code class="ruby">        :manufacturer_name,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+
+            
+
+            <code class="ruby">        :product_ndc,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+
+            
+
+            <code class="ruby">        :product_type,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+
+            
+
+            <code class="ruby">        :route,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+
+            
+
+            <code class="ruby">        :substance_name,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+
+            
+
+            <code class="ruby">        :rxcui,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+
+            
+
+            <code class="ruby">        :spl_id,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+
+            
+
+            <code class="ruby">        :spl_set_id,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+
+            
+
+            <code class="ruby">        :package_ndc,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+
+            
+
+            <code class="ruby">        :is_original_packager,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+
+            
+
+            <code class="ruby">        :upc,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+
+            
+
+            <code class="ruby">        :unii</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+
+            
+
+            <code class="ruby">      )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+
+            
+
+            <code class="ruby">    }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="46">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def collect_fields</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+
+            
+
+            <code class="ruby">    [</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="8" data-linenumber="50">
+            
+              <span class="hits">8</span>
+            
+
+            
+
+            <code class="ruby">      drug[:description],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+
+            
+
+            <code class="ruby">      drug[:inactive_ingredient],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+
+            
+
+            <code class="ruby">      drug[:spl_product_data_elements],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+
+            
+
+            <code class="ruby">      drug[:spl_unclassified_section],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
+            
+
+            
+
+            <code class="ruby">      drug[:description_table],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+
+            
+
+            <code class="ruby">      drug.dig(:openfda, :brand_name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="29" data-linenumber="56">
+            
+              <span class="hits">29</span>
+            
+
+            
+
+            <code class="ruby">    ].flatten.compact.map { |field| normalize_field(field) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="57">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def normalize_field(field)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="29" data-linenumber="60">
+            
+              <span class="hits">29</span>
+            
+
+            
+
+            <code class="ruby">    field.to_s.gsub(/\s+/, &#39; &#39;).strip.downcase</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="d4063e1d0b422e4d54543ddd396c2021b327732c">
+  <div class="header">
+    <h3>app/serializers/nocolor_drug_result_serializer.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class NocolorDrugResultSerializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  include JSONAPI::Serializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  set_type :nocolor_drug_result</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  attributes :fields, :package_label_principal_display_panel, :metadata</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="1108c18132272804367727494119326a3dc2beef">
+  <div class="header">
+    <h3>app/services/drug_service.rb</h3>
+    <h4>
+      <span class="green">
+  96.43%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>28</b> relevant lines.
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
 
@@ -447,31 +1255,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="200" data-linenumber="21">
-            
-              <span class="hits">200</span>
-            
-
-            
-
-            <code class="ruby">      fields_to_check = collect_fields(drug)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="452" data-linenumber="22">
+          <li class="covered" data-hits="452" data-linenumber="21">
             
               <span class="hits">452</span>
             
 
             
 
-            <code class="ruby">      fields_to_check.any? { |field| contains_food_coloring?(field) }</code>
+            <code class="ruby">      collect_fields(drug).any? { |field| contains_food_coloring?(field) }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="22">
             
 
             
@@ -481,7 +1277,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="23">
             
 
             
@@ -491,7 +1287,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="24">
             
 
             
@@ -501,7 +1297,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
+          <li class="covered" data-hits="1" data-linenumber="25">
             
               <span class="hits">1</span>
             
@@ -513,14 +1309,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="9" data-linenumber="26">
             
-              <span class="hits">1</span>
+              <span class="hits">9</span>
+            
+
+            
+
+            <code class="ruby">    NocolorDrugResultSerializer.new(filter_results.map { |drug| NocolorDrugResult.new(drug) }).serializable_hash</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
             
 
             
 
-            <code class="ruby">    filter_results.map do |drug|</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -530,19 +1336,19 @@
 
             
 
-            <code class="ruby">      {</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="8" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="29">
             
-              <span class="hits">8</span>
-            
-
+              <span class="hits">1</span>
             
 
-            <code class="ruby">        fields: collect_fields(drug),</code>
+            
+
+            <code class="ruby">  private</code>
           </li>
         </div>
       
@@ -552,17 +1358,19 @@
 
             
 
-            <code class="ruby">        package_label_principal_display_panel: drug[:package_label_principal_display_panel],</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="covered" data-hits="1" data-linenumber="31">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        metadata: {</code>
+            <code class="ruby">  def collect_fields(drug)</code>
           </li>
         </div>
       
@@ -572,17 +1380,19 @@
 
             
 
-            <code class="ruby">          set_id: drug[:set_id],</code>
+            <code class="ruby">    [</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="covered" data-hits="208" data-linenumber="33">
+            
+              <span class="hits">208</span>
             
 
             
 
-            <code class="ruby">          id: drug[:id],</code>
+            <code class="ruby">      drug[:description],</code>
           </li>
         </div>
       
@@ -592,7 +1402,7 @@
 
             
 
-            <code class="ruby">          effective_time: drug[:effective_time],</code>
+            <code class="ruby">      drug[:inactive_ingredient],</code>
           </li>
         </div>
       
@@ -602,7 +1412,7 @@
 
             
 
-            <code class="ruby">          version: drug[:version],</code>
+            <code class="ruby">      drug[:spl_product_data_elements],</code>
           </li>
         </div>
       
@@ -612,7 +1422,7 @@
 
             
 
-            <code class="ruby">          openfda: drug[:openfda]&amp;.slice(</code>
+            <code class="ruby">      drug[:spl_unclassified_section],</code>
           </li>
         </div>
       
@@ -622,7 +1432,7 @@
 
             
 
-            <code class="ruby">            :application_number,</code>
+            <code class="ruby">      drug[:description_table],</code>
           </li>
         </div>
       
@@ -632,17 +1442,19 @@
 
             
 
-            <code class="ruby">            :brand_name,</code>
+            <code class="ruby">      drug.dig(:openfda, :brand_name)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="covered" data-hits="893" data-linenumber="39">
+            
+              <span class="hits">893</span>
             
 
             
 
-            <code class="ruby">            :generic_name,</code>
+            <code class="ruby">    ].flatten.compact.map { |field| normalize_field(field) }</code>
           </li>
         </div>
       
@@ -652,7 +1464,7 @@
 
             
 
-            <code class="ruby">            :manufacturer_name,</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -662,27 +1474,31 @@
 
             
 
-            <code class="ruby">            :product_ndc,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="42">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">            :product_type,</code>
+            <code class="ruby">  def contains_food_coloring?(field)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="covered" data-hits="252" data-linenumber="43">
+            
+              <span class="hits">252</span>
             
 
             
 
-            <code class="ruby">            :route,</code>
+            <code class="ruby">    return false unless field.is_a?(String)</code>
           </li>
         </div>
       
@@ -692,27 +1508,31 @@
 
             
 
-            <code class="ruby">            :substance_name,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="covered" data-hits="252" data-linenumber="45">
+            
+              <span class="hits">252</span>
             
 
             
 
-            <code class="ruby">            :rxcui,</code>
+            <code class="ruby">    @food_colorings.any? do |coloring|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="covered" data-hits="4420" data-linenumber="46">
+            
+              <span class="hits">4420</span>
             
 
             
 
-            <code class="ruby">            :spl_id,</code>
+            <code class="ruby">      field.match?(/\b#{Regexp.escape(coloring)}\b/i)</code>
           </li>
         </div>
       
@@ -722,7 +1542,7 @@
 
             
 
-            <code class="ruby">            :spl_set_id,</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -732,7 +1552,7 @@
 
             
 
-            <code class="ruby">            :package_ndc,</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -742,27 +1562,31 @@
 
             
 
-            <code class="ruby">            :is_original_packager,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="covered" data-hits="1" data-linenumber="50">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">            :upc,</code>
+            <code class="ruby">  def normalize_field(field)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
+          <li class="covered" data-hits="893" data-linenumber="51">
+            
+              <span class="hits">893</span>
             
 
             
 
-            <code class="ruby">            :unii</code>
+            <code class="ruby">    field.to_s.gsub(/\s+/, &#39; &#39;).strip.downcase</code>
           </li>
         </div>
       
@@ -772,7 +1596,7 @@
 
             
 
-            <code class="ruby">          )</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -782,27 +1606,31 @@
 
             
 
-            <code class="ruby">        }</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="54">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      }</code>
+            <code class="ruby">  def load_food_colorings</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="covered" data-hits="2" data-linenumber="55">
+            
+              <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    YAML.load_file(Rails.root.join(&#39;config&#39;, &#39;data&#39;, &#39;food_colorings.yml&#39;))[&#39;food_colorings&#39;].map(&amp;:downcase)</code>
           </li>
         </div>
       
@@ -818,320 +1646,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="57">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="58">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="59">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="60">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def collect_fields(drug)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="61">
-            
-
-            
-
-            <code class="ruby">    [</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="216" data-linenumber="62">
-            
-              <span class="hits">216</span>
-            
-
-            
-
-            <code class="ruby">      drug[:description],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-
-            
-
-            <code class="ruby">      drug[:inactive_ingredient],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="64">
-            
-
-            
-
-            <code class="ruby">      drug[:spl_product_data_elements],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-
-            
-
-            <code class="ruby">      drug[:spl_unclassified_section],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="66">
-            
-
-            
-
-            <code class="ruby">      drug[:description_table],</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="67">
-            
-
-            
-
-            <code class="ruby">      drug.dig(:openfda, :brand_name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="922" data-linenumber="68">
-            
-              <span class="hits">922</span>
-            
-
-            
-
-            <code class="ruby">    ].flatten.compact.map { |field| normalize_field(field) }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="71">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def contains_food_coloring?(field)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="252" data-linenumber="72">
-            
-              <span class="hits">252</span>
-            
-
-            
-
-            <code class="ruby">    return false unless field.is_a?(String)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="73">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="252" data-linenumber="74">
-            
-              <span class="hits">252</span>
-            
-
-            
-
-            <code class="ruby">    @food_colorings.any? do |coloring|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="4420" data-linenumber="75">
-            
-              <span class="hits">4420</span>
-            
-
-            
-
-            <code class="ruby">      field.match?(/\b#{Regexp.escape(coloring)}\b/i)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="76">
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="77">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="78">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="79">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def normalize_field(field)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="922" data-linenumber="80">
-            
-              <span class="hits">922</span>
-            
-
-            
-
-            <code class="ruby">    field.to_s.gsub(/\s+/, &#39; &#39;).strip.downcase</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="81">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="82">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="83">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def load_food_colorings</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="84">
-            
-              <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    YAML.load_file(Rails.root.join(&#39;config&#39;, &#39;data&#39;, &#39;food_colorings.yml&#39;))[&#39;food_colorings&#39;].map(&amp;:downcase)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="85">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="86">
             
 
             

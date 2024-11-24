@@ -18,41 +18,12 @@ class DrugService
 
   def filter_results
     fetch_drugs.reject do |drug|
-      fields_to_check = collect_fields(drug)
-      fields_to_check.any? { |field| contains_food_coloring?(field) }
+      collect_fields(drug).any? { |field| contains_food_coloring?(field) }
     end
   end
 
   def format_results
-    filter_results.map do |drug|
-      {
-        fields: collect_fields(drug),
-        package_label_principal_display_panel: drug[:package_label_principal_display_panel],
-        metadata: {
-          set_id: drug[:set_id],
-          id: drug[:id],
-          effective_time: drug[:effective_time],
-          version: drug[:version],
-          openfda: drug[:openfda]&.slice(
-            :application_number,
-            :brand_name,
-            :generic_name,
-            :manufacturer_name,
-            :product_ndc,
-            :product_type,
-            :route,
-            :substance_name,
-            :rxcui,
-            :spl_id,
-            :spl_set_id,
-            :package_ndc,
-            :is_original_packager,
-            :upc,
-            :unii
-          )
-        }
-      }
-    end
+    NocolorDrugResultSerializer.new(filter_results.map { |drug| NocolorDrugResult.new(drug) }).serializable_hash
   end
 
   private
