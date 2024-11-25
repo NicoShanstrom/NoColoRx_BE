@@ -29,6 +29,7 @@ module NocolorxBe
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.active_support.to_time_preserves_timezone = :zone
-
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_nocolorx_app_session'
   end
 end

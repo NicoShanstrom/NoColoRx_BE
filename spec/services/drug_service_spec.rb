@@ -21,6 +21,7 @@ RSpec.describe DrugService, :vcr do
   describe '#format_results' do
     it 'formats the results with specified keys and fields' do
       formatted_results = service.format_results
+
       # Validate JSON:API-compliant structure
       expect(formatted_results).to include(:data)
       expect(formatted_results[:data]).to be_an(Array)

@@ -36,6 +36,9 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
+  # config.before(:each, type: :request) do
+  #   allow_any_instance_of(ActionDispatch::Request).to receive(:session).and_return({})
+  # end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
@@ -75,8 +78,6 @@ RSpec.configure do |config|
     WebMock.disable_net_connect!(allow_localhost: true)
   end
 end
-
-
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fda.gov/drug/label.json?api_key&limit=100&search=openfda.generic_name:%22nonexistentdrug%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Mon, 25 Nov 2024 22:39:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - default-src 'none'
+      Etag:
+      - W/"50-Gov3eVBQAYPDbwMSq8YtHKLjrHw"
+      Strict-Transport-Security:
+      - max-age=31536000;
+      - max-age=31536000; preload
+      Via:
+      - https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+      X-Api-Umbrella-Request-Id:
+      - cjcltdtfd3k5cm4dseh0
+      X-Cache:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - f1b732e8-6d8a-45a1-53bd-3d516edaed85
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "code": "NOT_FOUND",
+            "message": "No matches found!"
+          }
+        }
+  recorded_at: Mon, 25 Nov 2024 22:39:31 GMT
+recorded_with: VCR 6.3.1
