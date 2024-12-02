@@ -7,4 +7,20 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  namespace :api do
+    namespace :v1 do
+      # User routes
+      resources :users, only: [:create, :show, :update, :destroy]
+
+      # Session routes
+      post "/login", to: "sessions#create"
+      delete "/logout", to: "sessions#destroy"
+
+      # Drugs controller (search)
+      resources :drugs, only: [:index]
+
+      # Saved prescriptions routes
+      resources :saved_prescriptions, only: [:index, :create, :destroy]
+    end
+  end
 end
