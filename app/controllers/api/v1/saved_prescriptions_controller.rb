@@ -1,9 +1,9 @@
 class Api::V1::SavedPrescriptionsController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user!
 
   def index
     prescriptions = current_user.saved_prescriptions
-    render json: prescriptions, status: :ok
+    render json: SavedPrescriptionSerializer.new(prescriptions), status: :ok
   end
 
   def create
@@ -15,7 +15,6 @@ class Api::V1::SavedPrescriptionsController < ApplicationController
       render json: { errors: saved_prescription.errors.full_messages }, status: :unprocessable_entity
     end
   end
-
 
   def destroy
     prescription = current_user.saved_prescriptions.find(params[:id])
@@ -33,13 +32,5 @@ class Api::V1::SavedPrescriptionsController < ApplicationController
       fields: [],
       metadata: {}
     )
-  end
-
-  def authenticate_user
-    render json: { error: "Unauthorized" }, status: :unauthorized unless session[:user_id] && current_user
-  end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
   end
 end
