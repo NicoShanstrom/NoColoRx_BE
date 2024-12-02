@@ -7,6 +7,7 @@ class Api::V1::SavedPrescriptionsController < ApplicationController
   end
 
   def create
+    # require 'pry'; binding.pry
     Rails.logger.debug "Received Params: #{params[:saved_prescription]}"
     saved_prescription = current_user.saved_prescriptions.new(saved_prescription_params)
 
