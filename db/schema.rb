@@ -10,21 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_25_222445) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_02_202559) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "saved_prescriptions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "drug_name"
-    t.string "drug_dosage"
     t.string "manufacturer"
-    t.text "ingredients"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "package_label_principal_display_panel"
     t.jsonb "metadata"
-    t.jsonb "fields"
+    t.jsonb "description"
     t.index ["user_id"], name: "index_saved_prescriptions_on_user_id"
   end
 
