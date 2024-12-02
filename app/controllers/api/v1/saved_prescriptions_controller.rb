@@ -7,11 +7,13 @@ class Api::V1::SavedPrescriptionsController < ApplicationController
   end
 
   def create
+    Rails.logger.debug "Received Params: #{params[:saved_prescription]}"
     saved_prescription = current_user.saved_prescriptions.new(saved_prescription_params)
 
     if saved_prescription.save
       render json: SavedPrescriptionSerializer.new(saved_prescription), status: :created
     else
+      Rails.logger.error "Validation Errors: #{saved_prescription.errors.full_messages}"
       render json: { errors: saved_prescription.errors.full_messages }, status: :unprocessable_entity
     end
   end
@@ -25,11 +27,12 @@ class Api::V1::SavedPrescriptionsController < ApplicationController
   private
 
   def saved_prescription_params
+    Rails.logger.debug "Params received: #{params[:saved_prescription]}"
     params.require(:saved_prescription).permit(
       :drug_name,
       :manufacturer,
       :package_label_principal_display_panel,
-      fields: [],
+      description: [],
       metadata: {}
     )
   end
