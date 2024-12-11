@@ -1,4 +1,6 @@
 class NocolorDrugResult
+  include FieldCollector
+
   attr_reader :drug
 
   def initialize(drug)
@@ -10,7 +12,7 @@ class NocolorDrugResult
   end
 
   def fields
-    collect_fields
+    collect_fields(drug)
   end
 
   def package_label_principal_display_panel
@@ -41,22 +43,5 @@ class NocolorDrugResult
         :unii
       )
     }
-  end
-
-  private
-
-  def collect_fields
-    [
-      drug[:description],
-      drug[:inactive_ingredient],
-      drug[:spl_product_data_elements],
-      drug[:spl_unclassified_section],
-      drug[:description_table],
-      drug.dig(:openfda, :brand_name)
-    ].flatten.compact.map { |field| normalize_field(field) }
-  end
-
-  def normalize_field(field)
-    field.to_s.gsub(/\s+/, ' ').strip.downcase
   end
 end

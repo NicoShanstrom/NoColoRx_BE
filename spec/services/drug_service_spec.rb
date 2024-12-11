@@ -63,7 +63,7 @@ RSpec.describe NocolorDrugResult do
   describe '#fields' do
     it 'returns the collected fields' do
       fields = drug_result.fields
-      expect(fields).to include("sample drug description")
+      expect(fields).to include("Sample drug description")
     end
   end
 
