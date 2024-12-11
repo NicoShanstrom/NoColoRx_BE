@@ -1,4 +1,6 @@
 class DrugService
+  include FieldCollector
+
   def initialize(drug_name)
     @drug_name = drug_name.downcase
     @food_colorings = load_food_colorings
@@ -28,27 +30,10 @@ class DrugService
 
   private
 
-  def collect_fields(drug)
-    [
-      drug[:description],
-      drug[:inactive_ingredient],
-      drug[:spl_product_data_elements],
-      drug[:spl_unclassified_section],
-      drug[:description_table],
-      drug.dig(:openfda, :brand_name)
-    ].flatten.compact.map { |field| normalize_field(field) }
-  end
-
   def contains_food_coloring?(field)
     return false unless field.is_a?(String)
 
-    @food_colorings.any? do |coloring|
-      field.match?(/\b#{Regexp.escape(coloring)}\b/i)
-    end
-  end
-
-  def normalize_field(field)
-    field.to_s.gsub(/\s+/, ' ').strip.downcase
+    @food_colorings.any? { |coloring| field.match?(/\b#{Regexp.escape(coloring)}\b/i) }
   end
 
   def load_food_colorings
