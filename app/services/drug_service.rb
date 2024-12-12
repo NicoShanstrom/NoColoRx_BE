@@ -10,7 +10,7 @@ class DrugService
     response = Faraday.get("https://api.fda.gov/drug/label.json") do |req|
       req.params['api_key'] = Rails.application.credentials.open_fda[:api_key]
       req.params['search'] = "openfda.generic_name:\"#{@drug_name}\""
-      req.params['limit'] = 100
+      req.params['limit'] = 1000
     end
 
     JSON.parse(response.body, symbolize_names: true)[:results] || []
