@@ -24,9 +24,7 @@ class DrugService
   end
 
   def filter_results
-    fetch_drugs.reject do |drug|
-      collect_fields(drug).any? { |field| contains_food_coloring?(field) }
-    end
+    @filtered_results ||= fetch_drugs.reject { |drug| food_coloring_present?(drug) }
   end
 
   def format_results
@@ -40,14 +38,24 @@ class DrugService
   end
 
   private
+  
+  def load_food_colorings
+    YAML.load_file(Rails.root.join('config', 'data', 'food_colorings.yml'))['food_colorings'].map(&:downcase)
+  end
 
   def contains_food_coloring?(field)
     return false unless field.is_a?(String)
 
-    @food_colorings.any? { |coloring| field.match?(/\b#{Regexp.escape(coloring)}\b/i) }
+    normalized_field = clean_field(field)
+
+    @food_colorings.any? do |coloring|
+      # Match variations like "FD&C Red No. 40" and "fd&c red #40"
+      regex_pattern = coloring.downcase.gsub(/[^a-z0-9]/, '.*?') # Flexible matching
+      normalized_field.match?(/\b#{regex_pattern}\b/)
+    end
   end
 
-  def load_food_colorings
-    YAML.load_file(Rails.root.join('config', 'data', 'food_colorings.yml'))['food_colorings'].map(&:downcase)
+  def food_coloring_present?(drug)
+    collect_fields(drug).any? { |field| contains_food_coloring?(field) }
   end
 end

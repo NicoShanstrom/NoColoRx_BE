@@ -5,9 +5,12 @@ class Api::V1::DrugsController < ApplicationController
     if drug_name.present?
       service = DrugService.new(drug_name)
       results = service.format_results
-      render json: results, status: :ok
+      render json: {
+        data: results[:data],
+        meta: results[:meta]
+      }, status: :ok
     else
-      render json: { error: "Please provide a valid drug_name" }, status: :bad_request
+      render json: { error: "Please provide a valid generic drug name" }, status: :bad_request
     end
   rescue StandardError => e
     Rails.logger.error "Error fetching drug data: #{e.message}"
