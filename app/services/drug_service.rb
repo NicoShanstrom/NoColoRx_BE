@@ -1,9 +1,12 @@
 class DrugService
   include FieldCollector
 
+  attr_reader :total_results
+
   def initialize(drug_name)
     @drug_name = drug_name.downcase
     @food_colorings = load_food_colorings
+    @total_results = 0 #initialize total results starting at 0
   end
 
   def fetch_drugs
@@ -13,7 +16,9 @@ class DrugService
       req.params['limit'] = 1000
     end
 
-    JSON.parse(response.body, symbolize_names: true)[:results] || []
+    drugs = JSON.parse(response.body, symbolize_names: true)[:results] || []
+    @total_results = drugs.size # capture total results before filtering
+    drugs
   rescue JSON::ParserError
     []
   end
@@ -25,7 +30,13 @@ class DrugService
   end
 
   def format_results
-    NocolorDrugResultSerializer.new(filter_results.map { |drug| NocolorDrugResult.new(drug) }).serializable_hash
+   {
+      data: NocolorDrugResultSerializer.new(filter_results.map { |drug| NocolorDrugResult.new(drug) }).serializable_hash[:data],
+      meta: {
+        total_results: @total_results,
+        filtered_results: filter_results.size
+      }
+    }
   end
 
   private
