@@ -5,6 +5,11 @@ class Api::V1::DrugsController < ApplicationController
     if drug_name.present?
       service = DrugService.new(drug_name)
       results = service.format_results
+
+      # # Debugging the response
+      # Rails.logger.debug "Results from Service: #{results.inspect}"
+      # Rails.logger.debug "Meta Data: #{results[:meta]}"
+
       render json: {
         data: results[:data],
         meta: results[:meta]
