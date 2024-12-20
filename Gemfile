@@ -36,3 +36,4 @@ gem "rack-cors"
 # API calls and data serialization
 gem 'faraday'
 gem 'jsonapi-serializer'
+gem 'htmlentities' #decode HTML entities for filtering results

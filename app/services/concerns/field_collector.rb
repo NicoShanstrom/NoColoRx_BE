@@ -13,7 +13,14 @@ module FieldCollector
   private
 
   def clean_field(field)
-    # Strip HTML tags and normalize whitespace
-    ActionController::Base.helpers.strip_tags(field.to_s).gsub(/\s+/, ' ').strip
+    coder = HTMLEntities.new
+
+    # Decode HTML entities, normalize case, strip tags, and whitespace
+    normalized = coder.decode(field.to_s)
+                      .gsub(/\s+/, ' ')             # Normalize whitespace
+                      .gsub(/&/, 'and')             # Replace "&" with "and"
+                      .strip                        # Remove leading/trailing spaces
+
+    ActionController::Base.helpers.strip_tags(normalized).downcase
   end
 end
